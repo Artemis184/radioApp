@@ -7,4 +7,12 @@ import { Injectable } from '@angular/core';
 export class RadiosService {
 
   constructor(private http:HttpClient) { }
+
+
+  getRadios(){
+    let url= "assets/BD/radios.json";
+    return this.http.get(url)
+  }
+
+
 }

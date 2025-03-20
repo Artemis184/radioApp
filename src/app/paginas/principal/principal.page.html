@@ -8,9 +8,8 @@
   <ion-list>
     <ion-item *ngFor="let objRadio of listaradios">
       <ion-label>
-        <ion-label>
-          {{objRadio.nombre}}
-        </ion-label>
+        <img [src]="objRadio.logo" alt="">
+        <ion-label>{{objRadio.nombre}}</ion-label>
       </ion-label>
     </ion-item>
   </ion-list>

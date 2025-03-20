@@ -1,0 +1,52 @@
+[
+    {
+        "logo": "/assets/img/laotra.jpg",
+        "nombre": "La Otra FM",
+        "url": "https://laotrafm.makrodigital.com:9580/stream"
+    },
+    {
+        "logo": "/assets/img/radiocanela.jpg",
+        "nombre": "Radio Canela Guayas",
+        "url": "https://canelaradio.makrodigital.com:9290/stream"
+    },
+    {
+        "logo": "/assets/img/lachismosa.jpg",
+        "nombre": "La Chismosa",
+        "url": "https://dattavolt.com/8256/stream"
+    },
+    {
+        "logo": "/assets/img/america.webp",
+        "nombre": "Smooth Jazz",
+        "url": "https://jazz.streeemer.com/listen/jazz/radio.aac"
+    },
+    {
+        "logo": "/assets/img/hitsradio.png",
+        "nombre": "Hits Radio",
+        "url": "https://19353.live.streamtheworld.com/977_HITS_SC"
+    },
+    {
+        "logo": "/assets/img/radiocaravana.png",
+        "nombre": "Radio Caravana",
+        "url": "https://streamingecuador.net:9006/stream"
+    },
+    {
+        "logo": "/assets/img/BBC.png",
+        "nombre": "BBC RADIO",
+        "url": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service?e=1698406105&h=9ec945915576febf2fce972aba32c7fe&s=1698391705"
+    },
+    {
+        "logo": "/assets/img/mega.jpg",
+        "nombre": "Radio Mega",
+        "url": "https://radiohdstreaming.ovh:8010/mega"
+    },
+    {
+        "logo": "/assets/img/recuerdo.webp",
+        "nombre": "Recuerda",
+        "url": "https://recuerda.streeemer.com/listen/recuerda/radio.aac"
+    },
+    {
+        "logo": "/assets/img/love.jpg",
+        "nombre": "Hits Love",
+        "url": "https://ais-sa2.cdnstream1.com/2210_128.mp3"
+    }
+]

@@ -17,6 +17,7 @@ export class PrincipalPage implements OnInit {
   listaradios: any[]=[];
   objRadioActiva:any={};
   bandera=false;
+  file:any;
 
   constructor(private serv:RadiosService) { }
 
@@ -30,10 +31,26 @@ export class PrincipalPage implements OnInit {
   accionarRadios(objRadio: any){
     //console.log(objRadio.nombre)
     this.objRadioActiva=objRadio;
-    this.bandera=true;
-    //console.log("ok")
+    if(this.bandera){
+      this.bandera=true;
+      this.file
+    }
+    //activar la radio
+    this.fun_playRadio(objRadio.url);
   }
 
+  fun_playRadio(url: any){
+    this.file=new Audio(url);
+    this.file.play().then(
+    
+    (respuesta:any) => {
+      console.log("radio ejecutando")
+    },(err:any)=>{
+      console.log("Error al ejecutar")
+    }
+  )
+  }
+  
 
 
   cargarRadios(){

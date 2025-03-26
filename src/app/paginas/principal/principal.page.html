@@ -6,14 +6,33 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let objRadio of listaradios">
+    <ion-item *ngFor="let objRadio of listaradios" (click)="accionarRadios(objRadio)">
       <ion-label>
         <img [src]="objRadio.logo" alt="">
         <ion-label>{{objRadio.nombre}}</ion-label>
       </ion-label>
     </ion-item>
   </ion-list>
-
-
-
 </ion-content>
+
+
+
+<ion-footer>
+  <div *ngIf="bandera">
+
+  <ion-toolbar>
+
+      <ion-row>
+        <ion-col>
+          <img [src]="objRadioActiva.logo" alt="">
+        </ion-col>
+        <ion-col>
+          <ion-label> {{objRadioActiva.nombre}} </ion-label>
+        </ion-col>
+      </ion-row>
+
+  </ion-toolbar>
+
+</div>
+
+</ion-footer>

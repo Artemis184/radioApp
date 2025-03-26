@@ -15,12 +15,26 @@ import { IonicModule } from '@ionic/angular';
 })
 export class PrincipalPage implements OnInit {
   listaradios: any[]=[];
+  objRadioActiva:any={};
+  bandera=false;
 
   constructor(private serv:RadiosService) { }
 
   ngOnInit() {
     this.cargarRadios();
   }
+
+
+
+
+  accionarRadios(objRadio: any){
+    //console.log(objRadio.nombre)
+    this.objRadioActiva=objRadio;
+    this.bandera=true;
+    //console.log("ok")
+  }
+
+
 
   cargarRadios(){
     this.serv.getRadios().subscribe(

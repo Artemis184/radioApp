@@ -20,19 +20,32 @@
 <ion-footer>
   <div *ngIf="bandera">
 
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
 
       <ion-row>
+
         <ion-col>
           <img [src]="objRadioActiva.logo" alt="">
         </ion-col>
         <ion-col>
           <ion-label> {{objRadioActiva.nombre}} </ion-label>
+
+          <div class="botones_radio">
+            
+            <ion-icon class="playbutton" name="play-circle-outline"></ion-icon>
+            <ion-icon class="pausebutton" name="pause-circle-outline"></ion-icon>
+            <ion-icon class="stopbutton" name="stop-circle-outline"></ion-icon>
+    
+          </div>
+
         </ion-col>
       </ion-row>
 
   </ion-toolbar>
 
+
+
 </div>
+
 
 </ion-footer>

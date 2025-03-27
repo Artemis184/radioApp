@@ -34,16 +34,20 @@ export class PrincipalPage implements OnInit {
 
 
 
-  accionarRadios(objRadio: any){
-    //console.log(objRadio.nombre)
-    this.objRadioActiva=objRadio;
-    if(this.bandera){
-      this.bandera=false;
+  accionarRadios(objRadio: any) {
+    // Si hay una radio en reproducción, detenerla antes de cambiar
+    if (this.file) {
       this.file.pause();
+      this.file = null; // Liberar el objeto de audio
     }
-    //activar la radio
+  
+    // Asignar la nueva radio activa
+    this.objRadioActiva = objRadio;
+  
+    // Reproducir la nueva radio
     this.fun_playRadio(objRadio.url);
   }
+  
 
   fun_playRadio(url: any){
     this.file=new Audio(url);

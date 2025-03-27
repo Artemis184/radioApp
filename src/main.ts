@@ -10,7 +10,7 @@ import { addIcons } from 'ionicons';
 
 import { playCircleOutline, pauseCircleOutline, stopCircleOutline } from 'ionicons/icons'
 
-
+import { StatusBar } from '@capacitor/status-bar';
 
 addIcons({
   'play-circle-outline': playCircleOutline,
@@ -20,6 +20,12 @@ addIcons({
 
 });
 
+
+const setStatusBar = async () => {
+  await StatusBar.setOverlaysWebView({ overlay: false})
+}
+
+setStatusBar();
 
 bootstrapApplication(AppComponent, {
   providers: [provideHttpClient(),

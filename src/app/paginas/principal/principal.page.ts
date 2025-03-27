@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { RadiosService } from 'src/app/servicios/radios.service';
 import { IonicModule } from '@ionic/angular';
+import { GeneralService } from 'src/app/servicios/general.service';
+
+
 
 
 @Component({
@@ -19,7 +22,10 @@ export class PrincipalPage implements OnInit {
   bandera=false;
   file:any;
 
-  constructor(private serv:RadiosService) { }
+  constructor(
+    private serv:RadiosService,
+    private ServG: GeneralService
+  ) { }
 
   ngOnInit() {
     this.cargarRadios();
@@ -32,8 +38,8 @@ export class PrincipalPage implements OnInit {
     //console.log(objRadio.nombre)
     this.objRadioActiva=objRadio;
     if(this.bandera){
-      this.bandera=true;
-      this.file
+      this.bandera=false;
+      this.file.pause();
     }
     //activar la radio
     this.fun_playRadio(objRadio.url);
@@ -42,15 +48,38 @@ export class PrincipalPage implements OnInit {
   fun_playRadio(url: any){
     this.file=new Audio(url);
     this.file.play().then(
-    
     (respuesta:any) => {
       console.log("radio ejecutando")
+      this.ServG.fun_mensaje("radio ejecutando")
+      this.bandera=true;
     },(err:any)=>{
+      this.fun_pause();
       console.log("Error al ejecutar")
+      this.ServG.fun_mensaje("error al ejecutar", "warning", 2100)
     }
   )
+
   }
   
+
+  fun_play(){
+    console.log("play")
+    this.file.play();
+
+  }
+
+
+  fun_pause(){
+    this.file.pause();
+    console.log("pause")
+
+  }
+
+
+  fun_stop(){
+    console.log("stop")
+
+  }
 
 
   cargarRadios(){
